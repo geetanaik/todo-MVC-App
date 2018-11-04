@@ -17,8 +17,20 @@ public class TodoItemService {
   public List<TodoItem> list() {
     return todoItemRepository.findAll();
   }
-
+  
   public TodoItem create(TodoItem todoItem) {
     return todoItemRepository.save(todoItem);
+  }
+  
+  public TodoItem getById(Long id)  { 
+		return todoItemRepository.findOne(id);  		  
+	  }
+  
+  public TodoItem update(TodoItem todoItem) {
+	return todoItemRepository.save(todoItem);
+  }
+ 
+  public void delete(Long id) {
+	 todoItemRepository.delete(id);
   }
 }
