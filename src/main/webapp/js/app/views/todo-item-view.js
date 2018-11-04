@@ -20,7 +20,8 @@ define([
       'dblclick @ui.label': 'onEditClick',
       'keydown @ui.edit': 'onEditKeypress',
       'focusout @ui.edit': 'onEditFocusout',
-      'click @ui.toggle': 'toggle'
+      'click @ui.toggle': 'toggle',
+      'click @ui.destroy' : 'onDestroy'   // gd
     },
     modelEvents: {
       change: 'render'
@@ -43,6 +44,12 @@ define([
         this.destroy();
       }
     },
+    
+    onDestroy : function() { //gd
+    //	this.destroy();      /
+    	this.model.destroy();     //model object destroy and refresh
+    },
+    
     onEditKeypress: function(e) {
       var ENTER_KEY = 13;
       var ESC_KEY = 27;

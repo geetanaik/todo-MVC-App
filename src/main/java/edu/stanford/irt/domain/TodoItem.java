@@ -19,11 +19,15 @@ public class TodoItem {
   private Long id;
 
   @Column(nullable = false)
+  //@gd @Column(nullable = true)
   private String description;
 
+  //@Column(nullable= true)                 //@gd
+  //private int status;       //zero by default; //@gd
+  
   @Temporal(TemporalType.TIMESTAMP)
   private Date created = new Date();
-
+  
   public Long getId() {
     return id;
   }
