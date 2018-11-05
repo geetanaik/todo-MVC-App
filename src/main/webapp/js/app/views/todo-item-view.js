@@ -46,8 +46,10 @@ define([
     },
     
     onDestroy : function() { //gd
-    //	this.destroy();      /
-    	this.model.destroy();     //model object destroy and refresh
+     	this.destroy(); 
+  
+  //   	this.remove(options);
+  //  	this.model.destroy();     //model object destroy and refresh
     },
     
     onEditKeypress: function(e) {

@@ -49,7 +49,7 @@ public class TodoItemController {
   @RequestMapping(value = "/api/todo-items/{id}", method = RequestMethod.DELETE)
   public void deleteTodoItem(@PathVariable("id") Long id) {
 	  todoItemService.delete(id); 
-  }
+  }	
  
   
   
